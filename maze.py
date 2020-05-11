@@ -1,14 +1,11 @@
-
 fileName = input("File Name : ")
 try:
   f = open(fileName,"r")
   text = f.read()
   text = text.replace('\n','')
   f.close()
-except FileNotFoundError:
-  print('File does not exist')
 except:
-  print("The file could not be read")
+  print('File does not exist')
   exit(1)
 
 
@@ -114,7 +111,6 @@ def findFinish( x, y, keys, amINecessary=False):
     manipulatePath(x, y, amINecessary)
 
   return amINecessary
-
 
 findFinish(x=sPoint[1], y=sPoint[0], keys=[])
 
